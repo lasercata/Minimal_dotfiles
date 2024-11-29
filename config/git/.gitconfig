@@ -1,0 +1,23 @@
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[user]
+    name = lasercata
+    email = 67599917+lasercata@users.noreply.github.com
+[cola]
+    spellcheck = false
+[color]
+    ui = auto
+[commit]
+    gpgsign = true
+[core]
+    editor = nvim
+[diff]
+    tool = nvimdiff
+    guitool = nvimdiff
+[merge]
+    tool = nvimdiff
+[mergetool "nvimdiff"]
+    layout = LOCAL,MERGED,REMOTE
