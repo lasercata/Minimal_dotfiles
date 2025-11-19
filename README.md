@@ -8,6 +8,7 @@ See each folder in [`config`](config) for more info.
 | Software                      | Description                            |
 | --------                      | -----------                            |
 | [bash](config/bash)           | shell and command language             |
+| [btop](config/btop)           | resources monitor                      |
 | [elinks](config/elinks)       | terminal web browser                   |
 | [git](config/git)             | version control software               |
 | [lf](config/lf)               | faster terminal file explorer          |
