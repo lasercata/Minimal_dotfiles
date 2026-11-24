@@ -4,7 +4,7 @@
 #
 # Author            : Parrot OS, then Lasercata
 # Last modification : 2025.04.29
-# Version           : v1.8.0
+# Version           : v1.8.0.debian
 #
 #-----------------------------------------------
 
@@ -173,7 +173,7 @@ preexec() {
 # Set the git ps1 variable
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
-source /usr/share/git/completion/git-prompt.sh
+# source /usr/share/git/completion/git-prompt.sh
 
 # precmd {{{3
 precmd() {
@@ -219,7 +219,7 @@ precmd() {
     # prompt_git_branch="\$([[ \$git_branch ]] && echo \"${link}${blue_bold}${git_branch}${red}\")"
     prompt_git_branch="\$([[ \$git_branch ]] && echo \"${link}${blue_bold}$(__git_ps1 ' (%s)' | sed 's/^ (//' | sed 's/)$//')${red}\")"
 
-    prompt_color_base="${red}${corner_1}${dash}[${prompt_error}${id_}${link}${time_}${link}${prompt_path}${prompt_git_branch}]\n"
+    prompt_color_base="${red}${corner_1}${dash}[${prompt_error}${id_}${link}${time_}${link}${prompt_user_host}${link}${prompt_path}${prompt_git_branch}]\n"
 
     if $normal_ps; then #In this case, the terminal has just be launched, so no command has been executed, or the command finished rapidly.
         if [ "$color_prompt" = yes ]; then
